@@ -1,0 +1,7 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="DockingMVVM.SL.App" xmlns:my="clr-namespace:System;assembly=mscorlib">
+    <Application.Resources>
+    <my:String x:Key="DevExpress.Xpf.License">53-96-0D-FE-CD-76-64-9B-02-71-1D-8C-09-61-78-CF-50-BF-4C-5C</my:String>
+  </Application.Resources>
+</Application>
