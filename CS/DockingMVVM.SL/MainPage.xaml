@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="DockingMVVM.SL.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxd="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+    xmlns:local="clr-namespace:DockingMVVM.SL"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <DataTemplate DataType="local:DocumentViewModel">
+            <Border Background="#FFBEC8D9">
+                <ContentPresenter Content="{Binding Content}" />
+            </Border>
+        </DataTemplate>
+        <DataTemplate DataType="local:PanelViewModel">
+            <Border Background="#FFDADFE4">
+                <ContentPresenter Content="{Binding Content}" />
+            </Border>
+        </DataTemplate>
+        <Style TargetType="dxd:LayoutPanel">
+            <Setter Property="Caption" Value="{Binding DisplayName}" />
+        </Style>
+        <Style TargetType="dxd:DocumentPanel">
+            <Setter Property="Caption" Value="{Binding DisplayName}" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="AddPanel" Click="AddPanel_Click" Content="Add Panel" />
+            <Button Name="AddDocument" Click="AddDocument_Click" Content="Add Document" />
+        </StackPanel>
+        <dxb:BarManager Grid.Row="1">
+            <dxd:DockLayoutManager ItemsSource="{Binding Workspaces}">
+                <dxd:LayoutGroup>
+                    <dxd:LayoutGroup Name="PanelHost" DestroyOnClosingChildren="False"/>
+                    <dxd:DocumentGroup Name="DocumentHost" DestroyOnClosingChildren="False" />
+                </dxd:LayoutGroup>
+            </dxd:DockLayoutManager>
+        </dxb:BarManager>
+    </Grid>
+</UserControl>
