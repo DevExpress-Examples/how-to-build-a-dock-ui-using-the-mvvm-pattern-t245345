@@ -1,7 +1,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [MainPage.xaml](./CS/DockingMVVM.SL/MainPage.xaml) (VB: [MainPage.xaml.vb](./VB/DockingMVVM.SL/MainPage.xaml.vb))
+* [MainPage.xaml](./CS/DockingMVVM.SL/MainPage.xaml) (VB: [MainPage.xaml](./VB/DockingMVVM.SL/MainPage.xaml))
 * [MainPage.xaml.cs](./CS/DockingMVVM.SL/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/DockingMVVM.SL/MainPage.xaml.vb))
 * [ViewModel.cs](./CS/DockingMVVM.SL/ViewModel.cs) (VB: [ViewModel.vb](./VB/DockingMVVM.SL/ViewModel.vb))
 <!-- default file list end -->
